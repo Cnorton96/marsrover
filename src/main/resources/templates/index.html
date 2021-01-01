@@ -3,11 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Mars Rover API</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
     <h2>Welcome to the mars rover API web application</h2>
-    <div th:text="${name}">
+    <form method="get" action="" id="formRover">
+        <input type="hidden" id="marsApiRoverData" name="marsApiRoverData" value=""/>
+        <div class="btn-group btn-group-lg" role="group" style="margin: 2em 0em">
+            <button id="marsApiCuriosity" type="button" class="btn btn-primary">Curiosity</button>
+            <button id="marsApiOpportunity" type="button" class="btn btn-primary">Opportunity</button>
+            <button id="marsApiSpirit" type="button" class="btn btn-primary">Spirit</button>
+        </div>
+    </form>
+    <div th:each="index : ${#numbers.sequence(0,roverApiResponse.photos.size(),4)}" class="row"
+         style="margin-bottom: 2em">
+        <div class="col-sm" th:if="${index < roverApiResponse.photos.size()}">
+            <img th:src="${roverApiResponse.photos[index].imgSrc}" class="img-fluid"/>
+        </div>
+        <div class="col-sm" th:if="${index+1 < roverApiResponse.photos.size()}">
+            <img th:src="${roverApiResponse.photos[index+1].imgSrc}" class="img-fluid"/>
+        </div>
+        <div class="col-sm" th:if="${index+2 < roverApiResponse.photos.size()}">
+            <img th:src="${roverApiResponse.photos[index+2].imgSrc}" class="img-fluid"/>
+        </div>
+        <div class="col-sm" th:if="${index+3 < roverApiResponse.photos.size()}">
+            <img th:src="${roverApiResponse.photos[index+3].imgSrc}" class="img-fluid"/>
+        </div>
 
     </div>
+    <!--      <img th:each="photo : ${roverApiResponse.photos}" th:src="${photo.imgSrc}"/> -->
+</div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

@@ -15,7 +15,6 @@ public class RoverApiResponse {
         this.photos = photos;
     }
 
-
     @Override
     public String toString() {
         return "RoverApiResponse{" + "photos=" + photos + '}';
