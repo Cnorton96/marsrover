@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MarsPhoto {
     private Long id;
-    private int sol;
+    private Integer sol;
     private MarsCamera camera;
     @JsonProperty("img_src")
     private String imgSrc;
@@ -37,7 +37,7 @@ public class MarsPhoto {
         this.id = id;
     }
 
-    public int getSol() {
+    public Integer getSol() {
         return sol;
     }
 
