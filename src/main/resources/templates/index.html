@@ -8,9 +8,10 @@
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-<div class="top-container">
-    <h1>Whats happening on Mars</h1>
-    <p>A Web Application</p>
+<div class="head-container">
+    <h1>Mars Rover Pictures</h1>
+    <p>In order to use this web application, simply choose one of the three rovers with the camera/cameras of your chose
+       than select the day you wish to view and hit the submit button and you will get each picture from that rovers camera taken that day.</p>
 </div>
 <div class="container">
     <form method="get" action="" id="formRover">
@@ -93,7 +94,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" th:field="${homeDto.cameraMinites}">
                     <label class="form-check-label" for="cameraMinites">
-                        Miniature Thermal Emission Spectrometer (Mini-TES)
+                        Miniature Thermal Emission Spectrometer
                     </label>
                 </div>
             </div>

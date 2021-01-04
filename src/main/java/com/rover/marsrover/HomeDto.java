@@ -14,7 +14,7 @@ public class HomeDto {
     private boolean cameraPancam;
     private boolean cameraMinites;
 
-    public boolean isCameraFhaz() {
+    public boolean getCameraFhaz() {
         return cameraFhaz;
     }
 
@@ -22,7 +22,7 @@ public class HomeDto {
         this.cameraFhaz = cameraFhaz;
     }
 
-    public boolean isCameraRhaz() {
+    public boolean getCameraRhaz() {
         return cameraRhaz;
     }
 
@@ -30,7 +30,7 @@ public class HomeDto {
         this.cameraRhaz = cameraRhaz;
     }
 
-    public boolean isCameraMast() {
+    public boolean getCameraMast() {
         return cameraMast;
     }
 
@@ -38,7 +38,7 @@ public class HomeDto {
         this.cameraMast = cameraMast;
     }
 
-    public boolean isCameraChemcam() {
+    public boolean getCameraChemcam() {
         return cameraChemcam;
     }
 
@@ -46,7 +46,7 @@ public class HomeDto {
         this.cameraChemcam = cameraChemcam;
     }
 
-    public boolean isCameraMahli() {
+    public boolean getCameraMahli() {
         return cameraMahli;
     }
 
@@ -54,7 +54,7 @@ public class HomeDto {
         this.cameraMahli = cameraMahli;
     }
 
-    public boolean isCameraMardi() {
+    public boolean getCameraMardi() {
         return cameraMardi;
     }
 
@@ -62,7 +62,7 @@ public class HomeDto {
         this.cameraMardi = cameraMardi;
     }
 
-    public boolean isCameraNavCam() {
+    public boolean getCameraNavCam() {
         return cameraNavCam;
     }
 
@@ -70,7 +70,7 @@ public class HomeDto {
         this.cameraNavCam = cameraNavCam;
     }
 
-    public boolean isCameraPancam() {
+    public boolean getCameraPancam() {
         return cameraPancam;
     }
 
@@ -78,7 +78,7 @@ public class HomeDto {
         this.cameraPancam = cameraPancam;
     }
 
-    public boolean isCameraMinites() {
+    public boolean getCameraMinites() {
         return cameraMinites;
     }
 
@@ -103,6 +103,20 @@ public class HomeDto {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "HomeDto{" +
+                "marsApiRoverData='" + marsApiRoverData + '\'' +
+                ", marsSol=" + marsSol +
+                ", cameraFhaz=" + cameraFhaz +
+                ", cameraRhaz=" + cameraRhaz +
+                ", cameraMast=" + cameraMast +
+                ", cameraChemcam=" + cameraChemcam +
+                ", cameraMahli=" + cameraMahli +
+                ", cameraMardi=" + cameraMardi +
+                ", cameraNavCam=" + cameraNavCam +
+                ", cameraPancam=" + cameraPancam +
+                ", cameraMinites=" + cameraMinites +
+                '}';
+    }
 }

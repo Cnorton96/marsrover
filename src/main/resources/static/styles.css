@@ -1,6 +1,5 @@
-.top-container{
-    background-color: #f98a66;
-    position: relative;
+.head-container{
+    position: center;
+    background-color: aliceblue;
     text-align: center;
-    padding-top: 230px;
 }
